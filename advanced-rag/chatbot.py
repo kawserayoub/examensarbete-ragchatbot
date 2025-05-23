@@ -1,5 +1,3 @@
-# advanced-rag/rag_chatbot.py
-
 import os
 import sys
 from dotenv import load_dotenv
@@ -9,7 +7,6 @@ from enhancers import expand_query, rerank, generate_answer, ChatMemory
 
 from langchain_openai import ChatOpenAI
 
-# resolve paths
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_path = os.path.join(root_dir, "data")
 store_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "store")
