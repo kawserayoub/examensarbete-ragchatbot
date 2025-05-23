@@ -9,7 +9,7 @@ from enhancers import expand_query, rerank, generate_answer, ChatMemory
 from langchain_openai import ChatOpenAI
 
 load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
 
 st.set_page_config(page_title="RAG Assistant", layout="centered")
 st.markdown("""
